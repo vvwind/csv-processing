@@ -25,7 +25,7 @@ func (sr *Service) solve(equation string) int {
 	if sr.inWork {
 		sr.workers += 1
 	}
-	if sr.workers > 100 {
+	if sr.workers > 500 {
 		log.Panicln("Infinite Recursion found, stop!")
 	}
 	equation = strings.TrimPrefix(equation, "=")
